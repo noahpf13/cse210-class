@@ -1,13 +1,16 @@
 
 public class Resume
 {
+    // Attributes or variables
     public string _name;
     public List<Job> _jobs = new List<Job>();
 
+    // Constructs resume
     public Resume()
     {   
     }
-
+    
+    // Methods
     public void Display()
     {
         Console.WriteLine($"Name: {_name}");
