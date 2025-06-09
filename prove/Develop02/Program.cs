@@ -5,17 +5,17 @@ class Program
     static void Main(string[] args)
     {
         bool runMenu = true;
-        Journal journal = new Journal(); // Make sure this is defined
+        Journal journal = new Journal();
 
         while (runMenu)
         {
             Console.WriteLine("Menu:");
-            Console.WriteLine("1. Write a new entry");
-            Console.WriteLine("2. Display journal");
-            Console.WriteLine("3. Save journal to file");
-            Console.WriteLine("4. Load journal from file");
+            Console.WriteLine("1. Write");
+            Console.WriteLine("2. Display ");
+            Console.WriteLine("3. Save");
+            Console.WriteLine("4. Load");
             Console.WriteLine("5. Exit");
-            Console.Write("Choose an option: ");
+            Console.Write("What would you like to do? ");
             string input = Console.ReadLine();
 
             switch (input)
