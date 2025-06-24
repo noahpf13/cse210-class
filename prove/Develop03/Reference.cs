@@ -1,42 +1,36 @@
+// Reference.cs
 public class Reference
 {
     private string _book;
     private int _chapter;
-    private int _startverse;
-    private int _endverse;
+    private int _startVerse;
+    private int _endVerse;
     private int _verse;
-    private bool _hasrange;
-    
+    private bool _hasRange;
+
     // Multiple Verse
-    public Reference(string book, int chapter, int startverse, int endverse)
+    public Reference(string book, int chapter, int startVerse, int endVerse)
     {
         _book = book;
         _chapter = chapter;
-        _startverse = startverse;
-        _endverse = endverse;
-        _hasrange = true;
+        _startVerse = startVerse;
+        _endVerse = endVerse;
+        _hasRange = true;
     }
+
     // Single Verse
     public Reference(string book, int chapter, int verse)
     {
         _book = book;
         _chapter = chapter;
         _verse = verse;
-        _hasrange = false;
+        _hasRange = false;
     }
 
     public string DisplayText()
     {
-        if (_hasrange)
-        {
-            return $"{_book} {_chapter}:{_startverse}-{_endverse}";
-        }
-        else
-        {
-            return $"{_book} {_chapter}:{_verse}";
-        }
-        
-
-
+        return _hasRange
+            ? $"{_book} {_chapter}:{_startVerse}-{_endVerse}"
+            : $"{_book} {_chapter}:{_verse}";
     }
 }
